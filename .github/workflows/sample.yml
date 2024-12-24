@@ -1,0 +1,16 @@
+name: shell commands
+
+on: 
+  push: # Triggers the workflow on any push event
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: String command
+        run: echo "Welcome to DevOps" 
+
+      - name: Multiline script
+        run: | 
+          node -v # Check Node.js version
+          npm -v  # Check npm version
